@@ -1,0 +1,79 @@
+---
+title: "Photogrammetrie"
+author: "Damien"
+output: html_document
+runtime: shiny
+---
+
+Ce document permet de prévisualiser rapidement les conditions requises pour une acquisition photogrammétrique. 
+
+Pour plus de détails sur les méthodes de calcul : [http://www.adamtech.com.au/](http://www.adamtech.com.au/Blog/?p=68).
+
+![](http://raid-castor.asul-aviron.com/wp-content/uploads/2013/02/separator.gif)
+
+##A. Informations sur les appareils
+
+Les spécifications détaillées des différents appareils peuvent se trouver sur [http://www.imaging-resource.com/](http://www.imaging-resource.com/).
+
+Exemples utiles :
+
+###Canon EOS 6D
+
+* Effective Megapixels: **20.2**
+* Sensor Format: **35mm**
+* Sensor size: **855.62mm2 (35.80mm x 23.90mm)**
+* Approximate Pixel Pitch: **6.54 microns**
+* Image Resolution: **5472 x 3648 (20.0 MP, 3:2)** [full size]
+
+###Sony Alpha NEX-7 
+
+* Effective Megapixels: **24.3**
+* Sensor Format: **APS-C**
+* Sensor size: **366.6mm2 (23.50mm x 15.60mm)**
+* Approximate Pixel Pitch: **3.92 microns**
+* Image Resolution: **6000 x 4000 (24.0 MP, 3:2)** [full size]
+
+![](http://raid-castor.asul-aviron.com/wp-content/uploads/2013/02/separator.gif)
+
+##B. Calculs
+
+```{r, echo=FALSE}
+shinyAppDir("Scripts/12_pixSize",options=list(width="100%", height=550))
+```
+
+***
+
+```{r, echo=FALSE}
+shinyAppDir("Scripts/13_distance",options=list(width="100%", height=620))
+```
+
+***
+
+```{r, echo=FALSE}
+shinyAppDir("Scripts/14_res",options=list(width="100%", height=400))
+```
+
+![](http://raid-castor.asul-aviron.com/wp-content/uploads/2013/02/separator.gif)
+
+```{r, echo=FALSE}
+shinyAppDir("Scripts/15_ortho",options=list(width="100%", height=600))
+```
+
+![](http://nazg.org/public/photogram.jpg)
+
+***
+
+L'acquisition orthophotographique peut-être complétée par une double ou triple série de nouvelles stations :
+
+* A chaque angle de l'excavation, par incrément de 15° pour obtenir un overlap raisonnable. Soit 6 positions par angle dans le cas d'un secteur aux angles approximativement droits.
+* Faisant face directement à chacune des parois, en essayant de conserver la résolution pixel/cm
+* Des captures de détail si un ou des éléments particuliers justifient un surplus d'attention
+
+***
+
+![](http://nazg.org/public/photogram1.jpg)
+
+***
+
+![](http://nazg.org/public/photogram2.jpg)
+
